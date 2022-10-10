@@ -3,10 +3,10 @@ import QrReader from "react-qr-scanner";
 import Header from "../../../Header";
 import "../../../styles/qrRead.css";
 const QrRead = () => {
-  const [qr, setQr] = useState();
+  const [qr, setQr] = useState({ result: "", facingMode: environment });
 
   const handleScan = (data) => {
-    setQr(data);
+    setQr({ result: data, facingMode: environment });
   };
   const handleError = (err) => {
     console.log(err);
@@ -14,9 +14,6 @@ const QrRead = () => {
   const previewStyle = {
     height: 240,
     width: 320,
-  };
-  const handleCamara = {
-    facingMode: "environment",
   };
   console.log(qr);
   return (
@@ -28,7 +25,7 @@ const QrRead = () => {
         onScan={handleScan}
         facingMode={handleCamara}
       />
-      <p className="result">{qr?.text}</p>
+      <p className="result">{qr?.data.text}</p>
     </article>
   );
 };
