@@ -15,6 +15,9 @@ const QrRead = () => {
     height: 240,
     width: 320,
   };
+  const handleCamara = {
+    facingMode: "enenvironment",
+  };
   console.log(qr);
   return (
     <article className="lector__container">
@@ -23,6 +26,7 @@ const QrRead = () => {
         style={previewStyle}
         onError={handleError}
         onScan={handleScan}
+        facingMode={handleCamara}
       />
       <p className="result">{qr?.text}</p>
     </article>
