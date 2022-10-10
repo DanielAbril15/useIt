@@ -3,7 +3,7 @@ import QrReader from "react-qr-scanner";
 import Header from "../../../Header";
 import "../../../styles/qrRead.css";
 const QrRead = () => {
-  const [qr, setQr] = useState({ result: "No Result" });
+  const [qr, setQr] = useState();
 
   const handleScan = (data) => {
     setQr(data);
@@ -15,7 +15,7 @@ const QrRead = () => {
     height: 240,
     width: 320,
   };
-
+  console.log(qr);
   return (
     <article className="lector__container">
       <Header />
@@ -24,7 +24,7 @@ const QrRead = () => {
         onError={handleError}
         onScan={handleScan}
       />
-      <p className="result">{qr?.result}</p>
+      <p className="result">{qr?.text}</p>
     </article>
   );
 };
