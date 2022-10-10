@@ -23,6 +23,7 @@ const QrRead = () => {
         style={previewStyle}
         onError={handleError}
         onScan={handleScan}
+        facingMode="environment"
       />
       <p className="result">{qr?.text}</p>
     </article>
