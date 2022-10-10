@@ -16,7 +16,7 @@ const QrRead = () => {
     width: 320,
   };
   const handleCamara = {
-    facingMode: "enenvironment",
+    facingMode: "environment",
   };
   console.log(qr);
   return (
