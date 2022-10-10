@@ -23,9 +23,8 @@ const QrRead = () => {
         style={previewStyle}
         onError={handleError}
         onScan={handleScan}
-        facingMode={handleCamara}
       />
-      <p className="result">{qr?.data.text}</p>
+      <p className="result">{qr?.data?.text}</p>
     </article>
   );
 };
