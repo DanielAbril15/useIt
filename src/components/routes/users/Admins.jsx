@@ -24,10 +24,6 @@ const Admins = () => {
             {admin.role}
           </p>
           <p>
-            <span>Company: </span>
-            {admin.company}
-          </p>
-          <p>
             <span>email: </span>
             {admin.email}
           </p>

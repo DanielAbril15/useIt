@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import QrReader from "react-qr-scanner";
+import Header from "../../../Header";
+import "../../../styles/qrRead.css";
 const QrRead = () => {
-  const [qr, setQr] = useState({ result: "" });
+  const [qr, setQr] = useState({ result: "No Result" });
 
   const handleScan = (data) => {
     setQr(data);
@@ -15,14 +17,15 @@ const QrRead = () => {
   };
 
   return (
-    <div>
+    <article className="lector__container">
+      <Header />
       <QrReader
         style={previewStyle}
         onError={handleError}
         onScan={handleScan}
       />
-      <p>{qr.result}</p>
-    </div>
+      <p className="result">{qr?.result}</p>
+    </article>
   );
 };
 

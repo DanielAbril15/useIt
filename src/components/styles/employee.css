@@ -41,3 +41,20 @@
   color: #7cb342;
   font-weight: bold;
 }
+.user button {
+  position: absolute;
+  right: 20%;
+  bottom: 10%;
+  width: 120px;
+  height: 30px;
+  font-size: 1.8rem;
+  color: rgb(240, 248, 255);
+  background-color: #7cb342;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(100, 98, 98);
+}
+.user button:hover {
+  scale: 1.05;
+}
