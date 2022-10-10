@@ -3,10 +3,10 @@ import QrReader from "react-qr-scanner";
 import Header from "../../../Header";
 import "../../../styles/qrRead.css";
 const QrRead = () => {
-  const [qr, setQr] = useState({ result: "", facingMode: environment });
+  const [qr, setQr] = useState({ result: "", facingMode: "environment" });
 
   const handleScan = (data) => {
-    setQr({ result: data, facingMode: environment });
+    setQr({ result: data, facingMode: "environment" });
   };
   const handleError = (err) => {
     console.log(err);
